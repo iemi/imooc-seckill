@@ -1,0 +1,23 @@
+server:
+  port: 8888
+
+spring:
+    datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/seckill?charset=utf8mb4&useSSL=false&serverTimezone=Asia/Shanghai
+      username: root
+      password: root
+    mvc:
+      view:
+        prefix: /WEB-INF/jsp/
+        suffix: .jsp
+    redis:
+      host: localhost
+      port: 6379
+      jedis:
+        pool:
+          max-wait: 30000
+          max-active: 100
+          max-idle: 20
+          min-idle: 0
+      timeout: 3000
